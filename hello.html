@@ -2,8 +2,95 @@
 <html>
 	<head>
 		<title>My WebPage1</title>
+		<style>
+			h1, h2 {
+				text-align: center;
+				text-decoration-color: blue
+			}
+
+			#header {
+				border : 2px dotted black;
+				height: 100px;
+				background-color: lightblue;
+			}
+
+			#studentForm {
+				width: 50%;
+				border-right: 1px solid black;
+				align		
+			}
+
+			.leftSide {
+				text-align: right;
+				padding-right: 10px;
+			}
+
+			table {
+				border-collapse: collapse;
+			}
+
+			td {
+				padding-top: 5px;
+				padding-bottom: 5px;
+			}
+		</style>
 	</head>
 	<body>
-		Hello, world!
+		<div id = "header">
+			<h1>Students details</h1>
+		</div>
+		<div id="studentForm">
+			<form>
+				<h2>Application Form</h2>
+				<table margin-left="50px" align="center">
+					<tr>
+						<td class="leftSide">Enter your name:</td>
+						<td>
+							<input type="text">
+						</td>
+					</tr>
+					<tr>
+						<td class="leftSide">Enter your DOB:</td>
+						<td>
+							<input type="date">
+						</td>
+					</tr>
+					<tr>
+						<td class="leftSide">Enter your registration number:</td>
+						<td>
+							<input type="text" name="registrationNumber">
+						</td>
+					</tr>
+					<tr>
+						<td class="leftSide">Enter your year</td>
+						<td>
+							<input type="number" name="year" max="4" min="1">
+						</td>
+					</tr>
+					<tr>
+						<td class="leftSide">Select your department</td>
+						<td>
+							<select name="department" id="department">
+								<option value="none">--Select--</option>
+								<option value="civil">Civil Engineering</option>
+								<option value="cse">Computer Science Engineering</option>
+								<option value="eee">Electrical and Electronics Engineering</option>
+								<option value="ece">Electronics and Communication Engineering</option>
+								<option value="mech">Mechanical Engineering</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						</td>
+						<td>
+							<button>Submit</button>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<div>
+		</div>
 	</body>
 </html>
