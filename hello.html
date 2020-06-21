@@ -2,95 +2,119 @@
 <html>
 	<head>
 		<title>My WebPage1</title>
-		<style>
-			h1, h2 {
-				text-align: center;
-				text-decoration-color: blue
-			}
-
-			#header {
-				border : 2px dotted black;
-				height: 100px;
-				background-color: lightblue;
-			}
-
-			#studentForm {
-				width: 50%;
-				border-right: 1px solid black;
-				align		
-			}
-
-			.leftSide {
-				text-align: right;
-				padding-right: 10px;
-			}
-
-			table {
-				border-collapse: collapse;
-			}
-
-			td {
-				padding-top: 5px;
-				padding-bottom: 5px;
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="scripts.js"></script>
 	</head>
 	<body>
+		<div id="whole">
 		<div id = "header">
 			<h1>Students details</h1>
 		</div>
+		<div>
 		<div id="studentForm">
 			<form>
 				<h2>Application Form</h2>
-				<table margin-left="50px" align="center">
-					<tr>
-						<td class="leftSide">Enter your name:</td>
-						<td>
-							<input type="text">
+				<div style="overflow-y: auto;" height = "200px">
+				<table class="noborder" align="center">
+					<tr class="noborder">
+						<td class="leftSide noborder">Enter your name:</td>
+						<td class="noborder">
+							<input id="studentName" type="text">
 						</td>
 					</tr>
-					<tr>
-						<td class="leftSide">Enter your DOB:</td>
-						<td>
-							<input type="date">
+					<tr class="noborder">
+						<td class="leftSide noborder" >Enter your DOB:</td>
+						<td class="noborder">
+							<input id="dateOfBirth" type="date">
 						</td>
 					</tr>
-					<tr>
-						<td class="leftSide">Enter your registration number:</td>
-						<td>
-							<input type="text" name="registrationNumber">
+					<tr class="noborder">
+						<td class="leftSide noborder">Enter your registration number:</td>
+						<td class="noborder">
+							<input id="registerNumber" type="text" name="registrationNumber">
 						</td>
 					</tr>
-					<tr>
-						<td class="leftSide">Enter your year</td>
-						<td>
-							<input type="number" name="year" max="4" min="1">
+					<tr class="noborder">
+						<td class="leftSide noborder">Enter your year</td>
+						<td class="noborder">
+							<input id="year" type="number" name="year" min="1" max="4" />
 						</td>
 					</tr>
-					<tr>
-						<td class="leftSide">Select your department</td>
-						<td>
-							<select name="department" id="department">
+					<tr class="noborder">
+						<td class="leftSide noborder">Select your department</td>
+						<td class="noborder">
+							<select id="department" name="department" id="department">
 								<option value="none">--Select--</option>
-								<option value="civil">Civil Engineering</option>
-								<option value="cse">Computer Science Engineering</option>
-								<option value="eee">Electrical and Electronics Engineering</option>
-								<option value="ece">Electronics and Communication Engineering</option>
-								<option value="mech">Mechanical Engineering</option>
+								<option value="CIVIL">Civil Engineering</option>
+								<option value="CSE">Computer Science Engineering</option>
+								<option value="EEE">Electrical and Electronics Engineering</option>
+								<option value="ECE">Electronics and Communication Engineering</option>
+								<option value="MECH">Mechanical Engineering</option>
 							</select>
 						</td>
 					</tr>
-					<tr>
-						<td>
+					<tr class="noborder">
+						<td class="noborder">
 						</td>
-						<td>
-							<button>Submit</button>
+						<td class="noborder">
+							<button type="button" id="submitButton" onclick="addRow()">Submit</button>
 						</td>
 					</tr>
 				</table>
+			</div>
 			</form>
 		</div>
-		<div>
+		<div id="studentDetails">
+			<table id="studentTable" align="center" class="scrolldown noborder fixed">
+				<thead>
+					<tr>
+						<th>Student Name</th>
+						<th>Register Number</th>
+						<th>Date of Birth</th>
+						<th>Year</th>
+						<th>Branch</th>
+						</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>asdf</td>
+						<td>asdf</td>
+						<td>3</td>
+						<td>4</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>asdf</td>
+						<td>asdf</td>
+						<td>3</td>
+						<td>4</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>asdf</td>
+						<td>asdf</td>
+						<td>3</td>
+						<td>4</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>asdf</td>
+						<td>asdf</td>
+						<td>3</td>
+						<td>4</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>asdf</td>
+						<td>asdf</td>
+						<td>3</td>
+						<td>4</td>
+						<td>5</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
+	</div>
+</div>
 	</body>
 </html>
