@@ -11,13 +11,17 @@ h1, h2 {
 
 #studentForm {
 	width: 49%;
-	border: 1px solid black;	
-	float: left;
+	border: 1px solid black;
 	flex-grow: 1;
+	float: left;
 }
 
 table.scrolldown {
 	width: 80%;
+}
+
+thead {
+	text-align: center;
 }
 
 table.scrolldown tbody, table.scrolldown thead {
@@ -30,16 +34,26 @@ table.scrolldown tbody, table.scrolldown thead {
 	height: 100%;
 }
 
+table {
+	table-layout: fixed;
+}
+
+td:after {
+  content: "\00A0";
+}
+
+table.scrolldown th, table.scrolldown td {
+	width : 110px;
+	max-width: 110px;
+	word-wrap: break-word;
+}
 
 table.scrolldown tbody {
-	height: 100px;
+	height: 150px;
 	overflow-y: auto;
 	overflow-x: auto;
 }
 
-tbody td, thead th {
-	width: 200px;
-}
 
 .noborder {
 	border:none;
@@ -47,17 +61,13 @@ tbody td, thead th {
 
 #studentDetails {
 	width: 50%;
-	float: left;
 	border: 1px solid red;
-	height: 100vh;
-}
- 
-table,th,td,tr {
-	border: 1px solid black;
+	float: left;
 }
 
 #studentTable {
 	margin-top: 50px;
+	border: 1px solid black;
 }
 
 .leftSide {
@@ -72,4 +82,14 @@ table {
 td {
 	padding-top: 5px;
 	padding-bottom: 5px;
+}
+
+@media (max-width: 900px) {
+	#studentForm {
+		width: 100%;
+	}
+
+	#studentDetails {
+		width: 100%;
+	}
 }
